@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Barber</title>
+
+     <script src="https://cdn.tailwindcss.com"></script>
+       <link rel="stylesheet" href="Css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #120F0E;
+            color: #F3F0EB;
+        }
+    </style>
+</head>
+
+<body class="bg-[#120F0E] text-[#F3F0EB]">
+
+    <!-- Cabeçalho / Navbar -->
+    <header class="flex justify-between items-center px-8 py-6 border-b border-[#2A2421] max-w-7xl mx-auto">
+
+        <div class="flex items-center space-x-2">
+            <span class="bg-[#C28E5F] text-[#120F0E] font-bold px-2 py-1 text-sm rounded">TB</span>
+
+            <div class="leading-tight">
+                <span class="font-bold tracking-wider text-sm block">TEXAS BARBER</span>
+                <span class="text-[10px] text-[#A39B95] tracking-widest block">BARBER SHOP / EST. 2018</span>
+            </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-12">
+
+            <nav class="flex space-x-8 text-sm font-medium text-[#A39B95]">
+                <a href="#inicio" class="hover:text-[#F3F0EB] transition">INÍCIO</a>
+                <a href="#servicos" class="hover:text-[#F3F0EB] transition">SERVIÇOS</a>
+                <a href="#barbearia" class="hover:text-[#F3F0EB] transition">SOBRE</a>
+                <a href="#contato" class="hover:text-[#F3F0EB] transition">CONTATO</a>
+            </nav>
+
+            <!-- BOTÃO AGENDAR CONECTADO -->
+            <a href="agendar.html"
+               class="bg-[#C28E5F] text-[#120F0E] font-semibold px-5 py-2.5 rounded text-sm hover:bg-[#b07d50] transition">
+                AGENDAR
+            </a>
+
+        </div>
+    </header>
+
+    <!-- Secção Hero -->
+    <section id="inicio" class="px-8 py-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <div>
+            <span class="text-[#C28E5F] text-xs font-semibold tracking-widest uppercase block mb-3">
+                BARBEARIA • ESTILO • ATITUDE
+            </span>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                SEU ESTILO.<br>SUA IDENTIDADE.
+            </h1>
+
+            <p class="text-[#A39B95] text-base md:text-lg mb-8 max-w-lg">
+                Mais que um corte: uma experiência feita para quem carrega personalidade em cada detalhe.
+            </p>
+
+            <!-- BOTÃO RESERVAR CONECTADO -->
+            <a href="agendar.html"
+               class="bg-[#C28E5F] text-[#120F0E] font-bold px-6 py-3.5 rounded inline-flex items-center space-x-2 hover:bg-[#b07d50] transition mb-6">
+                <span>RESERVE SEU HORÁRIO</span>
+                <span>→</span>
+            </a>
+
+            <p class="text-xs text-[#A39B95] tracking-widest uppercase">
+                CORTE PRECISO. PRESENÇA MARCANTE.
+            </p>
+        </div>
+
+        <div class="relative">
+            <div class="rounded-xl overflow-hidden border border-[#2A2421] bg-[#221C1A] h-[400px] flex items-center justify-center text-[#A39B95]">
+                <img class="Capa" src="Assts/Capa.jpeg" alt="Barbearia Texas">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Secção de Serviços -->
+    <section id="servicos" class="py-20 bg-[#171311]">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="mb-12">
+                <span class="text-[#C28E5F] text-xs font-semibold tracking-widest uppercase block mb-2">
+                    A EXPERIÊNCIA TEXAS
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-bold">SERVIÇOS DE RESPEITO.</h2>
+
+                <p class="text-[#A39B95] mt-2">
+                    Técnica apurada, cuidado nos detalhes e acabamento impecável.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Cartão 1 -->
+                <div class="servico-card bg-[#221C1A] border border-[#2A2421] rounded-xl overflow-hidden flex flex-col justify-between">
+
+                    <div>
+                        <div class="h-48 bg-[#2A2421] flex items-center justify-center text-[#A39B95]">
+                            <img class="Servi" src="Assts/Serviço1.jpeg" alt="Corte masculino">
+                        </div>
+
+                        <div class="p-6">
+                            <span class="bg-[#5c2323] text-[#f8d7d7] text-[10px] font-bold px-2 py-0.5 rounded uppercase">O MAIS PEDIDO</span>
+
+                            <h3 class="text-xl font-bold mt-3 mb-2">CORTE MASCULINO</h3>
+
+                            <p class="text-[#A39B95] text-sm">
+                                Do clássico ao moderno. O corte que combina com você.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-4 border-t border-[#2A2421] flex justify-between items-center text-sm">
+                        <span class="font-bold text-[#C28E5F] text-lg">R$ 40</span>
+                        <span class="text-[#A39B95] text-xs">30–45 MIN</span>
+                    </div>
+                </div>
+
+                <!-- Cartão 2 -->
+                <div class="servico-card bg-[#221C1A] border border-[#2A2421] rounded-xl overflow-hidden flex flex-col justify-between">
+
+                    <div>
+                        <div class="h-48 bg-[#2A2421] flex items-center justify-center text-[#A39B95]">
+                            <img class="Servi2" src="Assts/Serviço2.jpeg" alt="Barba e contorno">
+                        </div>
+
+                        <div class="p-6">
+                            <span class="bg-[#5c4223] text-[#f8ead7] text-[10px] font-bold px-2 py-0.5 rounded uppercase">TRADIÇÃO</span>
+
+                            <h3 class="text-xl font-bold mt-3 mb-2">BARBA & CONTORNO</h3>
+
+                            <p class="text-[#A39B95] text-sm">
+                                Desenho preciso, toalha quente e acabamento de respeito.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-4 border-t border-[#2A2421] flex justify-between items-center text-sm">
+                        <span class="font-bold text-[#C28E5F] text-lg">R$ 25</span>
+                        <span class="text-[#A39B95] text-xs">30–45 MIN</span>
+                    </div>
+                </div>
+
+                <!-- Cartão 3 -->
+                <div class="servico-card bg-[#221C1A] border border-[#2A2421] rounded-xl overflow-hidden flex flex-col justify-between">
+
+                    <div>
+                        <div class="h-48 bg-[#2A2421] flex items-center justify-center text-[#A39B95]">
+                            <img class="Servi3" src="Assts/Serviço3.jpeg" alt="Combo Texas">
+                        </div>
+
+                        <div class="p-6">
+                            <span class="bg-[#3a5c23] text-[#e3f8d7] text-[10px] font-bold px-2 py-0.5 rounded uppercase">MELHOR ESCOLHA</span>
+
+                            <h3 class="text-xl font-bold mt-3 mb-2">COMBO TEXAS</h3>
+
+                            <p class="text-[#A39B95] text-sm">
+                                Corte + barba para renovar o visual por completo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-4 border-t border-[#2A2421] flex justify-between items-center text-sm">
+                        <span class="font-bold text-[#C28E5F] text-lg">R$ 60</span>
+                        <span class="text-[#A39B95] text-xs">30–45 MIN</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Sobre -->
+    <section id="barbearia" class="py-20 bg-[#D4C5B9] text-[#120F0E]">
+
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <div class="rounded-xl overflow-hidden bg-[#bfae9e] h-[350px] flex items-center justify-center text-[#554a43]">
+                <img src="Assts/Babearia.jpeg" alt="Interior da Texas Barber">
+            </div>
+
+            <div>
+                <span class="text-[#8c5e3c] text-xs font-semibold tracking-widest uppercase block mb-2">
+                    RAÍZES FORTES, ESTILO AUTÊNTICO.
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
+                    A TRADIÇÃO DO BOM CORTE.
+                </h2>
+
+                <p class="text-[#554a43] text-base mb-6 leading-relaxed">
+                    A Texas Barber nasceu para valorizar o ritual da barbearia: atendimento próximo, técnica apurada e respeito ao estilo de cada cliente. Um espaço para desacelerar, renovar o visual e sair com a confiança lá em cima.
+                </p>
+
+                <span class="font-bold text-sm tracking-wider uppercase border-b-2 border-[#8c5e3c] pb-1 inline-block">
+                    ATENDIMENTO PERSONALIZADO
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Secção de Diferenciais -->
+    <section class="py-20 bg-[#171311]">
+
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+
+            <div>
+                <span class="text-[#C28E5F] text-xs font-semibold tracking-widest uppercase block mb-2">
+                    POR QUE ESCOLHER A TEXAS?
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-bold">
+                    O DETALHE FAZ A DIFERENÇA.
+                </h2>
+            </div>
+
+            <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div>
+                    <span class="text-[#C28E5F] text-sm font-bold block mb-2">01</span>
+                    <h3 class="font-bold text-base mb-1">PROFISSIONAIS</h3>
+                    <p class="text-[#A39B95] text-sm">Técnica e atenção em cada atendimento.</p>
+                </div>
+
+                <div>
+                    <span class="text-[#C28E5F] text-sm font-bold block mb-2">02</span>
+                    <h3 class="font-bold text-base mb-1">AMBIENTE</h3>
+                    <p class="text-[#A39B95] text-sm">Conforto com personalidade única.</p>
+                </div>
+
+                <div>
+                    <span class="text-[#C28E5F] text-sm font-bold block mb-2">03</span>
+                    <h3 class="font-bold text-base mb-1">SEU ESTILO</h3>
+                    <p class="text-[#A39B95] text-sm">Cada corte respeita quem você é.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção CTA -->
+    <section class="py-20 px-8 bg-[#221C1A] max-w-7xl mx-auto my-12 rounded-2xl border border-[#2A2421] text-center">
+
+        <span class="text-[#C28E5F] text-xs font-semibold tracking-widest uppercase block mb-2">
+            CHEGOU A HORA DE RENOVAR
+        </span>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+            SEU PRÓXIMO CORTE COMEÇA AQUI.
+        </h2>
+
+        <p class="text-[#A39B95] mb-8 max-w-md mx-auto">
+            Chame a nossa equipe e encontre o melhor horário para você.
+        </p>
+
+        <!-- BOTÃO AGENDAR AGORA CONECTADO -->
+        <a href="agendar.html"
+           class="bg-[#C28E5F] text-[#120F0E] font-bold px-8 py-4 rounded inline-flex items-center space-x-2 hover:bg-[#b07d50] transition">
+            <span>AGENDAR AGORA</span>
+            <span>→</span>
+        </a>
+
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="border-t border-[#2A2421] py-8 px-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#A39B95] max-w-7xl mx-auto">
+
+        <div class="flex items-center space-x-2 mb-4 md:mb-0">
+            <span class="bg-[#C28E5F] text-[#120F0E] font-bold px-2 py-1 rounded">TB</span>
+
+            <div>
+                <span class="font-bold text-[#F3F0EB] block">TEXAS BARBER</span>
+                <span>© 2026 TEXAS BARBER</span>
+            </div>
+        </div>
+
+        <div>
+            <span>RUA DO ESTILO, 125 - (11) 99899-9989 - @TEXASBARBER</span>
+        </div>
+
+    </footer>
+
+</body>
+</html>

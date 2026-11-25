@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agendamento - Texas Barber</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="Css/style.css">
+
+    <style>
+        body {
+            background-color: #120F0E;
+            color: #F3F0EB;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .horario {
+            background-color: #221C1A;
+            border: 1px solid #3A302B;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .horario:hover {
+            border-color: #8B2628;
+            color: #C28E5F;
+        }
+
+        .horario.selecionado {
+            background-color: #8B2628;
+            border-color: #8B2628;
+            color: white;
+        }
+
+        .horario:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="p-6 border-b border-[#2A2421]">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">TEXAS BARBER</h1>
+
+            <a href="index.html"
+               class="text-[#C28E5F] hover:text-white">
+                Voltar ao início
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold">AGENDE SEU HORÁRIO</h2>
+
+            <p class="text-[#A39B95] mt-3">
+                Escolha a data e o melhor horário para você.
+            </p>
+        </div>
+
+        <div class="bg-[#171311] p-8 rounded-xl border border-[#2A2421]">
+
+            <label class="block mb-3 font-semibold">
+                Escolha a data:
+            </label>
+
+            <input
+                type="date"
+                id="data"
+                class="w-full p-3 rounded-lg bg-[#221C1A] border border-[#3A302B] text-white mb-8"
+            >
+
+            <h3 class="text-xl font-bold mb-5">
+                HORÁRIOS DISPONÍVEIS
+            </h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="horarios">
+
+                <button class="horario" type="button">09:00</button>
+                <button class="horario" type="button">10:00</button>
+                <button class="horario" type="button">11:00</button>
+                <button class="horario" type="button">12:00</button>
+                <button class="horario" type="button">13:00</button>
+                <button class="horario" type="button">14:00</button>
+                <button class="horario" type="button">15:00</button>
+                <button class="horario" type="button">16:00</button>
+                <button class="horario" type="button">17:00</button>
+                <button class="horario" type="button">18:00</button>
+
+            </div>
+
+            <div class="mt-8">
+                <p class="text-[#A39B95] mb-2">
+                    Horário selecionado:
+                </p>
+
+                <p id="horarioEscolhido" class="text-[#C28E5F] font-bold">
+                    Nenhum horário selecionado
+                </p>
+            </div>
+
+            <button
+                id="confirmar"
+                class="w-full mt-8 bg-[#8B2628] hover:bg-[#6F1D1F] p-4 rounded-lg font-bold transition"
+                type="button">
+                CONFIRMAR AGENDAMENTO
+            </button>
+
+        </div>
+    </main>
+
+    <script>
+        const horarios = document.querySelectorAll(".horario");
+        const horarioEscolhido = document.getElementById("horarioEscolhido");
+        const data = document.getElementById("data");
+        const confirmar = document.getElementById("confirmar");
+
+        let horarioSelecionado = "";
+
+        // Impede selecionar datas anteriores
+        const hoje = new Date();
+        const ano = hoje.getFullYear();
+        const mes = String(hoje.getMonth() + 1).padStart(2, "0");
+        const dia = String(hoje.getDate()).padStart(2, "0");
+
+        data.min = `${ano}-${mes}-${dia}`;
+
+        horarios.forEach(botao => {
+            botao.addEventListener("click", () => {
+
+                horarios.forEach(item => {
+                    item.classList.remove("selecionado");
+                });
+
+                botao.classList.add("selecionado");
+
+                horarioSelecionado = botao.textContent;
+
+                horarioEscolhido.textContent = horarioSelecionado;
+            });
+        });
+
+        confirmar.addEventListener("click", () => {
+
+            if (!data.value) {
+                alert("Por favor, escolha uma data!");
+                return;
+            }
+
+            if (!horarioSelecionado) {
+                alert("Por favor, escolha um horário!");
+                return;
+            }
+
+            alert(
+                "Agendamento selecionado!\n" +
+                "Data: " + data.value + "\n" +
+                "Horário: " + horarioSelecionado
+            );
+
+        });
+    </script>
+
+</body>
+</html>
